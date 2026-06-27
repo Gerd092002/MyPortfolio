@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Gerd Garay — Web Developer & Software Developer. PHP, Laravel, Tailwind CSS, JavaScript, Python, React. Isabel, Leyte, Philippines."/>
+  <meta name="keywords" content="Gerd Garay, Web Developer, Software Developer, PHP, Laravel, Tailwind CSS, JavaScript, React, Python, MySQL, Git, Isabel Leyte Philippines"/>
+  <meta property="og:title" content="Gerd Garay — Web Developer & Software Developer"/>
+  <meta property="og:description" content="Aspiring web developer building efficient, user-friendly web applications using PHP, Laravel, Tailwind CSS, and more."/>
+  <meta property="og:type" content="website"/>
+  <title>Gerd Garay — Web Developer</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Gerd Garay</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=garaygerd@gmail.com" target="_blank" rel="noopener" class="nav-btn">Get in touch</a>
+      </div>
+      <!-- Mobile menu toggle -->
+      <button class="nav-hamburger" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown -->
+    <div class="nav-mobile" id="mobileMenu">
+      <a href="#about"      onclick="closeMobile()">About</a>
+      <a href="#experience" onclick="closeMobile()">Experience</a>
+      <a href="#projects"   onclick="closeMobile()">Projects</a>
+      <a href="#skills"     onclick="closeMobile()">Skills</a>
+      <a href="#contact"    onclick="closeMobile()">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="avatar-wrap">
+            <div class="avatar-ring">
+
+              <img src="photo.png" alt="Gerd Garay"/> 
+              
+            </div>
+            <span class="avail-badge">
+              <span class="avail-dot"></span>
+              Available for work
+            </span>
+          </div>
+
+          <div class="hero-text">
+            <div class="hero-location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Isabel, Leyte, Philippines
+            </div>
+            <h1>Gerd Garay</h1>
+            <p class="hero-role">Web Developer &amp; Software Developer</p>
+            <p class="hero-bio">
+              An aspiring web developer with experience in PHP, Laravel, HTML, Tailwind CSS, React,
+              and Git. I enjoy building responsive and user-friendly web applications while
+              continuously improving my technical and problem-solving skills. I am eager to contribute
+              to innovative projects and grow professionally in web development and software engineering.
+            </p>
+            <div class="hero-actions">
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download Resume
+              </a>
+              <a href="#projects" class="btn-secondary">View Projects</a>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-langs">
+                <span class="lang-tag">🇵🇭 Filipino / Tagalog</span>
+                <span class="lang-tag">🇬🇧 English</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-label">About</h2>
+        <div class="about-body">
+          <p>
+            I'm <strong>Gerd Garay</strong>, a web developer and software developer based in
+            Isabel, Leyte, Philippines. I build full-stack web applications with a strong focus on
+            clean code, responsive design, and great user experience.
+          </p>
+          <p>
+            My primary stack is <strong>PHP and Laravel</strong> on the backend paired with
+            <strong>Tailwind CSS, HTML, and JavaScript</strong> on the frontend. I also work with
+            <strong>Python</strong> for machine learning integrations, have experience with
+            <strong>Bootstrap</strong>, and am growing my skills in <strong>React</strong>.
+            All my projects are version-controlled with <strong>Git and GitHub</strong>.
+          </p>
+          <p>
+            I recently graduated with a <strong>BS in Information Technology</strong> from
+            Visayas State University, where my coursework covers Web Development, Networking,
+            and Database Management Systems. I've applied my skills through real-world professional
+            work, academic projects, and a thesis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-label">Professional Experience</h2>
+        <div class="timeline">
+
+          <!-- Residentia Connect -->
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <span class="timeline-year">Apr 2026 –<br/>Present</span>
+              <span class="tl-dot tl-dot--green"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-role">Full-stack Web Developer</div>
+                  <div class="timeline-org">
+                    <a href="https://residentiaconnect.com/" target="_blank" rel="noopener" class="org-link">
+                      Residentia Connect
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    &nbsp;·&nbsp; On-call
+                  </div>
+                </div>
+                <span class="tl-badge tl-badge--green">Current</span>
+              </div>
+              <div class="tl-stack">Laravel &nbsp;+&nbsp; Tailwind CSS</div>
+              <ul class="timeline-list">
+                <li>Designed and implemented CRUD functionalities for various system modules.</li>
+                <li>Built and maintained responsive user interfaces using Tailwind CSS.</li>
+                <li>Developed and integrated forms with backend functionality using Laravel and MySQL.</li>
+                <li>Collaborated with the development team to implement new features, fix bugs, and improve system performance.</li>
+              </ul>
+              <div class="tl-tags">
+                <span>Laravel</span><span>Tailwind CSS</span><span>MySQL</span><span>PHP</span><span>Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline-item reveal">
+            <div class="timeline-left">
+              <span class="timeline-year">Education</span>
+              <span class="tl-dot tl-dot--blue"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-role">BS Information Technology</div>
+              <div class="timeline-org">Visayas State University &nbsp;·&nbsp; Isabel, Leyte</div>
+              <ul class="timeline-list">
+                <li>Relevant coursework in Web Development, Networking, and Database Management Systems.</li>
+                <li>Applied skills through professional, academic, and thesis projects.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-label">Projects</h2>
+        <div class="projects-list">
+
+          <!-- Smart Facial Recognition -->
+          <div class="project-item reveal">
+            <div class="project-meta">
+              <span class="project-year">Oct 2025 –<br/>Jul 2026</span>
+              <span class="proj-dot proj-dot--blue"></span>
+            </div>
+            <div class="project-body">
+              <div class="project-header">
+                <div class="project-title-group">
+                  <h3 class="project-name">Smart Facial Recognition Gate Access System</h3>
+                  <span class="proj-badge">Thesis</span>
+                </div>
+              </div>
+              <div class="local-note">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                This project cannot be hosted online — it requires a physical Arduino UNO device and a local camera setup to function. It is designed to run in a controlled local environment only.
+              </div>
+              <div class="proj-stack">PHP · Python · OpenCV · Arduino UNO · HTML · JavaScript · Tailwind CSS · MySQL</div>
+              <p class="project-desc">
+                A machine learning-based access control system integrating facial detection technology
+                for automated gate operation. Upon successful recognition, an Arduino Uno triggers
+                the gate mechanism. Includes a real-time automated attendance and logging system,
+                with a PHP + Tailwind CSS web dashboard for system management and monitoring.
+              </p>
+              <div class="project-features">
+                <span>Facial recognition &amp; detection</span>
+                <span>Arduino gate automation</span>
+                <span>Real-time attendance logging</span>
+                <span>Admin web dashboard</span>
+                <span>User data management</span>
+                <span>Automated access management</span>
+              </div>
+              <div class="project-tech-row">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Arduino UNO</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Performance -->
+          <div class="project-item reveal">
+            <div class="project-meta">
+              <span class="project-year">Mar –<br/>Apr 2025</span>
+              <span class="proj-dot proj-dot--green"></span>
+            </div>
+            <div class="project-body">
+              <div class="project-header">
+                <div class="project-title-group">
+                  <a href="https://academictrack.ifree.page/" target="_blank" rel="noopener" class="project-name-link">
+                    Academic Performance Monitoring System
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                  <span class="proj-badge proj-badge--gray">Academic</span>
+                </div>
+              </div>
+              <div class="proj-stack">HTML · JavaScript · Tailwind CSS · PHP · MySQL</div>
+              <p class="project-desc">
+                A role-based web system for monitoring teachers' and students' academic performance,
+                with three separate portals for Admin, Teacher, and Student users. Teachers manage
+                subjects, activities, assignments, and grade submissions. Students view grades,
+                submit work, and request subject enrollment via an approval workflow.
+              </p>
+              <div class="project-features">
+                <span>3 roles: Admin / Teacher / Student</span>
+                <span>Subject &amp; enrollment management</span>
+                <span>Activity &amp; assignment tracking</span>
+                <span>Grade submission &amp; viewing</span>
+                <span>File uploads</span>
+                <span>Announcement board</span>
+                <span>Enrollment approval workflow</span>
+                <span>Admin user management</span>
+              </div>
+              <!-- Demo credentials box -->
+              <div class="demo-box">
+                <div class="demo-box-title">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Credentials for Testing
+                </div>
+                <div class="demo-credentials">
+                  <div class="demo-role">
+                    <span class="demo-role-label">Admin</span>
+                    <span class="demo-cred">user: <strong>admin</strong> &nbsp;|&nbsp; pass: <strong>admin123!</strong></span>
+                  </div>
+                  <div class="demo-role">
+                    <span class="demo-role-label">Teacher</span>
+                    <span class="demo-cred">user: <strong>gerd@gmail.com</strong> &nbsp;|&nbsp; pass: <strong>A1b2C3d4garaygerd</strong></span>
+                  </div>
+                  <div class="demo-role">
+                    <span class="demo-role-label">Student</span>
+                    <span class="demo-cred">user: <strong>generson@gmail.com</strong> &nbsp;|&nbsp; pass: <strong>generson123</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-row">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- E-Commerce -->
+          <div class="project-item reveal">
+            <div class="project-meta">
+              <span class="project-year">Jan –<br/>Feb 2025</span>
+              <span class="proj-dot proj-dot--green"></span>
+            </div>
+            <div class="project-body">
+              <div class="project-header">
+                <div class="project-title-group">
+                  <a href="https://ecommerceproj.ifree.page/" target="_blank" rel="noopener" class="project-name-link">
+                    E-Commerce Management System
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                  <span class="proj-badge proj-badge--gray">Academic</span>
+                </div>
+              </div>
+              <div class="proj-stack">HTML · JavaScript · Tailwind CSS · PHP · MySQL</div>
+              <p class="project-desc">
+                A full-featured e-commerce management system for a sneakers and apparel store.
+                Includes a product catalog, category management, search, shopping cart, and secure
+                checkout. Built with an admin dashboard for managing products, categories, users,
+                and orders — plus order history, tracking, user profiles, and activity/audit logging.
+              </p>
+              <div class="project-features">
+                <span>Product catalog &amp; search</span>
+                <span>Category management</span>
+                <span>Shopping cart &amp; checkout</span>
+                <span>Admin dashboard</span>
+                <span>Order history &amp; tracking</span>
+                <span>User profile management</span>
+                <span>Activity &amp; audit logging</span>
+                <span>Responsive UI</span>
+              </div>
+              <!-- Demo credentials box -->
+              <div class="demo-box">
+                <div class="demo-box-title">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Credentials for Testing
+                </div>
+                <div class="demo-credentials">
+                  <div class="demo-role">
+                    <span class="demo-role-label">Admin</span>
+                    <span class="demo-cred">user: <strong>admin</strong> &nbsp;|&nbsp; pass: <strong>admin123</strong></span>
+                  </div>
+                  <div class="demo-role">
+                    <span class="demo-role-label">Staff</span>
+                    <span class="demo-cred">user: <strong>gerd@gmail.com</strong> &nbsp;|&nbsp; pass: <strong>gerd123</strong></span>
+                  </div>
+                  
+                  <div class="demo-role">
+                    <span class="demo-role-label">Customer</span>
+                    <span class="demo-cred">user: <strong>Jeneva@gmail.com</strong> &nbsp;|&nbsp; pass: <strong>Jeneva123</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-row">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-label">Tech Stack</h2>
+        <div class="stack-groups">
+
+          <div class="stack-group reveal">
+            <div class="stack-group-label">Languages</div>
+            <div class="stack-tags">
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">HTML</span>
+              <span class="stack-tag">CSS</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <div class="stack-group-label">Frameworks &amp; Libraries</div>
+            <div class="stack-tags">
+              <span class="stack-tag">Laravel</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Tailwind CSS</span>
+              <span class="stack-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <div class="stack-group-label">Database</div>
+            <div class="stack-tags">
+              <span class="stack-tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="stack-group reveal">
+            <div class="stack-group-label">Tools &amp; Technologies</div>
+            <div class="stack-tags">
+              <span class="stack-tag">Git &amp; GitHub</span>
+              <span class="stack-tag">XAMPP</span>
+              <span class="stack-tag">InfinityFree</span>
+              <span class="stack-tag">VS Code</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-label">Contact</h2>
+        <div class="contact-body reveal">
+          <p>
+            I'm open to internships, junior developer roles, freelance projects, and collaborations.
+            Feel free to reach out — I'd love to connect and explore how I can contribute to your
+            team or project.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:garaygerd@gmail.com" class="contact-link-item">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              garaygerd@gmail.com
+            </a>
+            <a href="tel:+639974127351" class="contact-link-item">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.82-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +63 997 412 7351
+            </a>
+            <a href="https://github.com/Gerd092002" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              github.com/Gerd092002
+            </a>
+            <a href="https://www.linkedin.com/in/gerdgaray/" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              linkedin.com/in/gerdgaray
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ── REFERENCES ── -->
+    <section id="references">
+      <div class="container">
+        <h2 class="section-label">References</h2>
+        <div class="references-grid">
+          <div class="ref-card reveal">
+            <div class="ref-name">Ariel Verzosa</div>
+            <div class="ref-role">Senior Head Developer</div>
+          </div>
+          <div class="ref-card reveal">
+            <div class="ref-name">James Frances Zamora</div>
+            <div class="ref-role">BS Information Technology — Teacher</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2026 Gerd Garay</span>
+        <span class="footer-stack">PHP · Laravel · Tailwind CSS · JavaScript · Python</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
