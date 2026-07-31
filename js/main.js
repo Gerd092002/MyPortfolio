@@ -1,6 +1,3 @@
-/* ================================================
-   GERD GARAY — PORTFOLIO SCRIPTS
-   ================================================ */
 
 // ── Navbar shadow on scroll ──
 const navbar = document.getElementById('navbar');
