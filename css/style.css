@@ -151,15 +151,32 @@ ul {
 }
 
 .nav-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.52rem 0.9rem;
+  border-radius: 999px;
   font-size: 0.84rem;
   font-weight: 500;
   color: var(--text-3);
-  transition: color 160ms ease;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--text);
+}
+
+.nav-links a:hover,
+.nav-links a.active,
+.nav-mobile a:hover,
+.nav-mobile a.active {
+  background: rgba(15, 23, 42, 0.055);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.06);
 }
 
 .nav-btn,
@@ -279,7 +296,9 @@ ul {
 }
 
 .nav-mobile a {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
   padding: 0.9rem 1.5rem;
   border-bottom: 1px solid rgba(229, 231, 235, 0.9);
   color: var(--text-2);
@@ -294,6 +313,11 @@ ul {
 .nav-mobile a:hover {
   color: var(--text);
   background: rgba(15, 23, 42, 0.03);
+}
+
+.nav-mobile a.active {
+  color: var(--text);
+  background: rgba(15, 23, 42, 0.055);
 }
 
 #hero {

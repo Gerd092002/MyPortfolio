@@ -60,16 +60,21 @@ if ('IntersectionObserver' in window && revealEls.length) {
 }
 
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .nav-mobile a[href^="#"]');
 
 const setActiveNav = () => {
-  let current = '';
+  const marker = window.scrollY + (window.innerHeight * 0.35);
+  let current = 'hero';
 
   sections.forEach((section) => {
-    if (window.scrollY >= section.offsetTop - 120) {
+    if (section.offsetTop <= marker) {
       current = section.id;
     }
   });
+
+  if (window.scrollY < 80) {
+    current = 'hero';
+  }
 
   navLinks.forEach((link) => {
     const target = link.getAttribute('href').slice(1);
@@ -77,7 +82,19 @@ const setActiveNav = () => {
   });
 };
 
-window.addEventListener('scroll', setActiveNav, { passive: true });
+let navScrollFrame = null;
+
+const scheduleActiveNavUpdate = () => {
+  if (navScrollFrame !== null) return;
+
+  navScrollFrame = window.requestAnimationFrame(() => {
+    navScrollFrame = null;
+    setActiveNav();
+  });
+};
+
+window.addEventListener('scroll', scheduleActiveNavUpdate, { passive: true });
+window.addEventListener('resize', scheduleActiveNavUpdate, { passive: true });
 setActiveNav();
 
 const modals = document.querySelectorAll('dialog.project-modal');
