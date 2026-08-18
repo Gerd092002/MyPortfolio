@@ -297,18 +297,19 @@ ul {
 }
 
 #hero {
-  padding: 5.5rem 0 4rem;
+  padding: 6.5rem 0 5rem;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
-  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.72fr);
+  gap: 4rem;
   align-items: center;
 }
 
 .hero-copy {
   min-width: 0;
+  max-width: 64ch;
 }
 
 .hero-kicker {
@@ -323,7 +324,8 @@ ul {
 h1 {
   margin: 0;
   color: var(--text);
-  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-size: clamp(3.2rem, 6vw, 5.6rem);
+  font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.06em;
 }
@@ -331,8 +333,8 @@ h1 {
 .hero-role {
   margin-top: 1rem;
   color: var(--text);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.12rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -344,25 +346,25 @@ h1 {
 }
 
 .hero-bio {
-  max-width: 62ch;
-  margin-top: 1rem;
+  max-width: 58ch;
+  margin-top: 1.2rem;
   color: var(--text-2);
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: 1.03rem;
+  line-height: 1.9;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
 }
 
 .hero-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-top: 1.2rem;
+  margin-top: 1.1rem;
 }
 
 .hero-link {
@@ -387,13 +389,13 @@ h1 {
 .hero-aside {
   min-width: 0;
   justify-self: end;
-  width: min(100%, 390px);
+  width: min(100%, 380px);
 }
 
 .portrait-card {
   padding: 1rem;
   border: 1px solid rgba(229, 231, 235, 0.95);
-  border-radius: 28px;
+  border-radius: 30px;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: var(--shadow);
 }
@@ -401,7 +403,7 @@ h1 {
 .portrait-image {
   position: relative;
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 24px;
   aspect-ratio: 0.88 / 1;
   background: linear-gradient(180deg, #f8fafc, #eef2ff);
 }
@@ -440,18 +442,19 @@ h1 {
 
 .portrait-meta {
   display: grid;
-  gap: 0.85rem;
-  padding: 1rem 0.25rem 0.2rem;
+  gap: 1rem;
+  padding: 1.05rem 0.15rem 0.15rem;
 }
 
 .meta-row {
   display: grid;
-  gap: 0.12rem;
+  gap: 0.2rem;
+  padding-top: 0.05rem;
 }
 
 .meta-label {
   color: var(--text-3);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -459,7 +462,7 @@ h1 {
 
 .meta-value {
   color: var(--text);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
@@ -680,11 +683,8 @@ section {
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 1rem;
   border-radius: 26px;
-  overflow: hidden;
+  padding: 1.35rem;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
