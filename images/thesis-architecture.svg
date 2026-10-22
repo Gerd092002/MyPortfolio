@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="diagram-title diagram-description">
+  <title id="diagram-title">CampusKey facial recognition access control conceptual framework</title>
+  <desc id="diagram-description">A redraw of the user-provided Input–Process–Output framework. Facial, enrollment, and administrative data enter five system modules for user management, face detection and recognition, authentication decisions, report generation, and monitoring. Outputs include physical access control and digital monitoring information. Administrators and authorized users interact with the system, with feedback informing system updates.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1 8 5 1 9" fill="none" stroke="#53655d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7"/>
+    </marker>
+    <marker id="arrow-small" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M1 1 6.5 4 1 7" fill="none" stroke="#53655d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </marker>
+    <style>
+      .eyebrow{font:700 14px 'Segoe UI',Arial,sans-serif;letter-spacing:2.4px;fill:#56675f}
+      .title{font:700 42px 'Segoe UI',Arial,sans-serif;letter-spacing:-1.1px;fill:#1d2d25}
+      .subtitle{font:400 20px 'Segoe UI',Arial,sans-serif;fill:#63736b}
+      .band-title{font:700 20px 'Segoe UI',Arial,sans-serif;letter-spacing:1px;fill:#fff}
+      .card-title{font:700 20px 'Segoe UI',Arial,sans-serif;fill:#22352b}
+      .card-copy{font:400 17px 'Segoe UI',Arial,sans-serif;fill:#52635a}
+      .module-title{font:700 19px 'Segoe UI',Arial,sans-serif;fill:#382322}
+      .module-copy{font:400 16px 'Segoe UI',Arial,sans-serif;fill:#675958}
+      .flow{font:600 15px 'Segoe UI',Arial,sans-serif;fill:#5d6d64}
+      .role-title{font:700 18px 'Segoe UI',Arial,sans-serif;fill:#293b31}
+      .role-copy{font:400 16px 'Segoe UI',Arial,sans-serif;fill:#5e6e65}
+      .note{font:600 16px 'Segoe UI',Arial,sans-serif;fill:#705821}
+    </style>
+  </defs>
+
+  <rect width="1440" height="960" rx="24" fill="#f5f7f4"/>
+  <text x="54" y="54" class="eyebrow">ACADEMIC THESIS · CAMPUSKEY</text>
+  <text x="54" y="102" class="title">Facial Recognition Access Control System</text>
+  <text x="54" y="132" class="subtitle">Conceptual framework · Input–Process–Output model</text>
+
+  <g>
+    <rect x="48" y="164" width="340" height="548" rx="14" fill="#fff" stroke="#cbd7e7" stroke-width="2"/>
+    <path d="M62 164h312a14 14 0 0 1 14 14v42H48v-42a14 14 0 0 1 14-14" fill="#173e80"/>
+    <text x="68" y="199" class="band-title">INPUT · DATA &amp; RESOURCES</text>
+
+    <rect x="66" y="236" width="304" height="132" rx="9" fill="#f3f6fb" stroke="#d9e1ee"/>
+    <text x="82" y="262" class="card-title">1. Facial data</text>
+    <text x="82" y="289" class="card-copy">• Live CCTV video and images</text>
+    <text x="82" y="313" class="card-copy">• NVR video recordings</text>
+
+    <rect x="66" y="380" width="304" height="150" rx="9" fill="#f3f6fb" stroke="#d9e1ee"/>
+    <text x="82" y="406" class="card-title">2. User enrollment data</text>
+    <text x="82" y="433" class="card-copy">• Student, staff, visitor profiles</text>
+    <text x="82" y="457" class="card-copy">• Facial templates and enrollment details</text>
+    <text x="82" y="481" class="card-copy">• Permissions and user roles</text>
+
+    <rect x="66" y="542" width="304" height="148" rx="9" fill="#f3f6fb" stroke="#d9e1ee"/>
+    <text x="82" y="568" class="card-title">3. System &amp; admin data</text>
+    <text x="82" y="595" class="card-copy">• System settings and configurations</text>
+    <text x="82" y="619" class="card-copy">• Access-control policies</text>
+    <text x="82" y="643" class="card-copy">• Device configurations</text>
+  </g>
+
+  <path d="M392 438h28" fill="none" stroke="#53655d" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="393" y="421" class="flow">data</text>
+
+  <g>
+    <rect x="428" y="164" width="590" height="548" rx="14" fill="#fff" stroke="#e3c8c6" stroke-width="2"/>
+    <path d="M442 164h562a14 14 0 0 1 14 14v42H428v-42a14 14 0 0 1 14-14" fill="#811a18"/>
+    <text x="448" y="199" class="band-title">PROCESS · SYSTEM PROCESSING &amp; DECISION-MAKING</text>
+
+    <rect x="450" y="236" width="546" height="76" rx="9" fill="#fbf5f4" stroke="#ead8d6"/>
+    <circle cx="478" cy="274" r="16" fill="#811a18"/>
+    <text x="478" y="279" text-anchor="middle" style="font:700 13px 'Segoe UI',Arial,sans-serif;fill:#fff">1</text>
+    <text x="506" y="263" class="module-title">User Management Module</text>
+    <text x="506" y="286" class="module-copy">Manage accounts, enrollment, roles, and permissions</text>
+
+    <rect x="450" y="322" width="546" height="76" rx="9" fill="#fbf5f4" stroke="#ead8d6"/>
+    <circle cx="478" cy="360" r="16" fill="#811a18"/>
+    <text x="478" y="365" text-anchor="middle" style="font:700 13px 'Segoe UI',Arial,sans-serif;fill:#fff">2</text>
+    <text x="506" y="349" class="module-title">Face Detection &amp; Recognition Module</text>
+    <text x="506" y="372" class="module-copy">Detect faces, extract features, and compare with records</text>
+
+    <rect x="450" y="408" width="546" height="76" rx="9" fill="#fbf5f4" stroke="#ead8d6"/>
+    <circle cx="478" cy="446" r="16" fill="#811a18"/>
+    <text x="478" y="451" text-anchor="middle" style="font:700 13px 'Segoe UI',Arial,sans-serif;fill:#fff">3</text>
+    <text x="506" y="435" class="module-title">Authentication &amp; Decision Module</text>
+    <text x="506" y="458" class="module-copy">Verify identity and grant or deny access</text>
+
+    <rect x="450" y="494" width="546" height="76" rx="9" fill="#fbf5f4" stroke="#ead8d6"/>
+    <circle cx="478" cy="532" r="16" fill="#811a18"/>
+    <text x="478" y="537" text-anchor="middle" style="font:700 13px 'Segoe UI',Arial,sans-serif;fill:#fff">4</text>
+    <text x="506" y="521" class="module-title">Report Generation Module</text>
+    <text x="506" y="544" class="module-copy">Generate access logs, summaries, and reports</text>
+
+    <rect x="450" y="580" width="546" height="76" rx="9" fill="#fbf5f4" stroke="#ead8d6"/>
+    <circle cx="478" cy="618" r="16" fill="#811a18"/>
+    <text x="478" y="623" text-anchor="middle" style="font:700 13px 'Segoe UI',Arial,sans-serif;fill:#fff">5</text>
+    <text x="506" y="607" class="module-title">Monitoring Module</text>
+    <text x="506" y="630" class="module-copy">Monitor system status and provide alerts</text>
+    <text x="450" y="686" class="flow">Modules work together to process inputs and produce access and monitoring outputs.</text>
+  </g>
+
+  <path d="M1022 438h28" fill="none" stroke="#53655d" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1023" y="421" class="flow">outputs</text>
+
+  <g>
+    <rect x="1058" y="164" width="334" height="548" rx="14" fill="#fff" stroke="#c9d9cd" stroke-width="2"/>
+    <path d="M1072 164h306a14 14 0 0 1 14 14v42h-334v-42a14 14 0 0 1 14-14" fill="#145b32"/>
+    <text x="1078" y="199" class="band-title">OUTPUT · ACCESS &amp; MONITORING</text>
+
+    <rect x="1076" y="236" width="298" height="206" rx="9" fill="#f2f7f3" stroke="#d6e3d9"/>
+    <text x="1092" y="264" class="card-title">A. Access &amp; control</text>
+    <text x="1092" y="288" class="flow">PHYSICAL OUTPUT</text>
+    <text x="1092" y="316" class="card-copy">• Grant or deny access</text>
+    <text x="1092" y="342" class="card-copy">• Arduino UNO door control</text>
+    <text x="1108" y="365" class="card-copy">– Open when access is granted</text>
+    <text x="1108" y="388" class="card-copy">– Remain locked when denied</text>
+
+    <rect x="1076" y="454" width="298" height="236" rx="9" fill="#f2f7f3" stroke="#d6e3d9"/>
+    <text x="1092" y="482" class="card-title">B. Monitoring &amp; information</text>
+    <text x="1092" y="506" class="flow">DIGITAL OUTPUT</text>
+    <text x="1092" y="534" class="card-copy">• Live CCTV feed and playback</text>
+    <text x="1092" y="558" class="card-copy">• Access logs and report summaries</text>
+    <text x="1092" y="582" class="card-copy">• Real-time dashboard and status</text>
+    <text x="1092" y="606" class="card-copy">• System overview and analytics</text>
+    <text x="1092" y="658" class="module-copy">For authorized users and administrators</text>
+  </g>
+
+  <g>
+    <rect x="160" y="756" width="470" height="90" rx="11" fill="#eef2f8" stroke="#cbd7e7"/>
+    <text x="184" y="786" class="role-title">ADMINISTRATOR</text>
+    <text x="184" y="811" class="role-copy">Manage settings, users, access policies, and data.</text>
+    <rect x="660" y="756" width="470" height="90" rx="11" fill="#fff7eb" stroke="#ead8bd"/>
+    <text x="684" y="786" class="role-title">AUTHORIZED USERS · STUDENTS / STAFF / VISITORS</text>
+    <text x="684" y="811" class="role-copy">Access the system and view dashboards, reports, and logs.</text>
+    <path d="M630 801h25M1130 801h45V716" fill="none" stroke="#53655d" stroke-width="1.8" marker-end="url(#arrow-small)"/>
+    <path d="M395 750V724" fill="none" stroke="#53655d" stroke-width="1.8" stroke-dasharray="6 5" marker-end="url(#arrow-small)"/>
+    <text x="407" y="739" class="flow">data entry / enrollment</text>
+    <path d="M1176 690v76H625" fill="none" stroke="#3b7652" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#arrow-small)"/>
+    <text x="796" y="752" class="flow">feedback · system update</text>
+  </g>
+
+  <text x="54" y="910" class="note">Redrawn from the conceptual framework you provided. This is not a wiring diagram or a capture of a running deployment.</text>
+</svg>

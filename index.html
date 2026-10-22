@@ -1,372 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gerd Garay is a Full-Stack Web Developer in the Philippines focused on PHP 8, Laravel 12, MySQL, React, Tailwind CSS, Docker, and REST APIs." />
-  <meta name="keywords" content="PHP Developer, Laravel Developer, Full-Stack Web Developer, PHP Laravel MySQL, Software Developer Philippines, Gerd Garay, React, Docker" />
-  <meta property="og:title" content="Gerd Garay - Full-Stack Web Developer" />
-  <meta property="og:description" content="Portfolio of Gerd Garay, a Full-Stack Web Developer focused on PHP 8, Laravel 12, MySQL, React, Tailwind CSS, and Docker." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f8f5" />
+  <meta name="author" content="Gerd Garay" />
+  <meta name="description" content="Gerd Garay is a Full-Stack Web Developer in Leyte, Philippines. Explore his professional experience, selected web projects, skills, and contact information." />
+  <meta name="keywords" content="Gerd Garay, Full-Stack Web Developer, PHP, Laravel, React, MySQL, Philippines" />
+  <link rel="canonical" href="https://gerd092002.github.io/MyPortfolio/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="photo.png" />
+  <meta property="og:title" content="Gerd Garay — Full-Stack Web Developer" />
+  <meta property="og:description" content="Selected work, professional experience, and skills of Gerd Garay, a Full-Stack Web Developer in Leyte, Philippines." />
   <meta property="og:url" content="https://gerd092002.github.io/MyPortfolio/" />
+  <meta property="og:image" content="https://gerd092002.github.io/MyPortfolio/photo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Gerd Garay - Full-Stack Web Developer" />
-  <meta name="twitter:description" content="Portfolio of Gerd Garay, a Full-Stack Web Developer focused on PHP 8, Laravel 12, MySQL, React, Tailwind CSS, and Docker." />
-  <meta name="twitter:image" content="photo.png" />
-  <title>Gerd Garay - Full-Stack Web Developer</title>
-
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="twitter:title" content="Gerd Garay — Full-Stack Web Developer" />
+  <meta name="twitter:description" content="Selected work, professional experience, and skills of Gerd Garay, a Full-Stack Web Developer in Leyte, Philippines." />
+  <meta name="twitter:image" content="https://gerd092002.github.io/MyPortfolio/photo.jpg" />
+  <title>Gerd Garay — Full-Stack Web Developer</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preload" as="image" href="./photo.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
-  <nav id="navbar" aria-label="Primary">
-    <div class="nav-inner">
-      <a class="nav-brand" href="#hero" aria-label="Gerd Garay home">Gerd Garay</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Gerd Garay, home">
+        <span class="brand-mark" aria-hidden="true">GG</span>
+        <span>Gerd Garay</span>
+      </a>
 
-      <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-  
-        </ul>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-btn">Download Resume</a>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-      <button class="nav-hamburger" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <a class="nav-resume" href="./resume.pdf" download>Download resume <span aria-hidden="true">&darr;</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="container" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="./resume.pdf" download>Download resume</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="nav-mobile" id="mobileMenu">
-      <a href="#hero" data-close-mobile>Home</a>
-      <a href="#about" data-close-mobile>About</a>
-      <a href="#experience" data-close-mobile>Experience</a>
-      <a href="#projects" data-close-mobile>Projects</a>
-      <a href="#skills" data-close-mobile>Skills</a>
-      <a href="#contact" data-close-mobile>Contact</a>
-    </div>
-  </nav>
-
-  <main>
-    <section id="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-copy reveal">
-            <h1>Gerd Garay</h1>
-            <p class="hero-role">Full-Stack Web Developer</p>
-            <p class="hero-bio">
-             Building scalable, reliable, and user-focused web applications with PHP, Laravel, MySQL, REST APIs, and modern frontend technologies.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#projects" class="btn-primary">View Projects</a>
-              <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">Download Resume</a>
-              <a href="#contact" class="btn-ghost">Contact Me</a>
-            </div>
-
-            <div class="hero-links" aria-label="Professional links">
-              <a href="https://github.com/Gerd092002" target="_blank" rel="noopener noreferrer" class="hero-link">
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/gerdgaray/" target="_blank" rel="noopener noreferrer" class="hero-link">
-                LinkedIn
-              </a>
-              <a href="mailto:gerdgaray@gmail.com" class="hero-link">
-                Email
-              </a>
-            </div>
+  <main id="main">
+    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> Full-Stack Web Developer <span class="eyebrow-separator" aria-hidden="true">/</span> Leyte, Philippines</p>
+          <h1 id="hero-title">I build web systems that make <span>everyday work easier.</span></h1>
+          <p class="hero-intro">I’m Gerd Garay, an Information Technology graduate who enjoys turning real workflows into useful, well-crafted web applications—from the data layer to the interface.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">&rarr;</span></a>
+            <a class="button button-secondary" href="./resume.pdf" download>Download resume <span aria-hidden="true">&darr;</span></a>
           </div>
+          <div class="hero-socials" aria-label="Professional links">
+            <a href="https://github.com/Gerd092002" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&nearr;</span></a>
+            <a href="https://www.linkedin.com/in/gerdgaray/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+            <a href="mailto:gerdgaray@gmail.com">Email <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </div>
 
-          <aside class="hero-aside reveal">
-            <div class="portrait-card">
-              <div class="portrait-image">
-                <img src="photo.png" alt="Portrait of Gerd Garay" loading="eager" decoding="async" />
-                <span class="availability-pill">
-                  <span class="availability-dot"></span>
-                  Available for work
-                </span>
-              </div>
+        <figure class="portrait-card reveal">
+          <div class="portrait-frame">
+            <img src="./photo.jpg" alt="Portrait of Gerd Garay" width="2322" height="2322" fetchpriority="high" decoding="async" />
+            <span class="portrait-label">Full-stack developer</span>
+          </div>
+          <figcaption>
+            <span class="portrait-name">Gerd Garay</span>
+            <span class="portrait-location">Isabel, Leyte, Philippines</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="container hero-bottom">
+        <p>BS Information Technology <span aria-hidden="true">&middot;</span> Visayas State University</p>
+        <a href="#experience">Currently on-call with SyncPoint Strategies <span aria-hidden="true">&darr;</span></a>
+      </div>
+    </section>
 
-              <div class="portrait-meta">
-                <div class="meta-row">
-                  <span class="meta-label">Location</span>
-                  <span class="meta-value">Philippines</span>
-                </div>
-                <div class="meta-row">
-                  <span class="meta-label">Primary stack</span>
-                  <span class="meta-value">PHP, Laravel, MySQL</span>
-                </div>
-                <div class="meta-row">
-                  <span class="meta-label">Focus</span>
-                  <span class="meta-value">Backend systems, APIs, UI delivery</span>
-                </div>
-                <div class="meta-row">
-                  <span class="meta-label">Availability</span>
-                  <span class="meta-value">Open to software development opportunities</span>
-                </div>
-              </div>
-            </div>
-          </aside>
+    <section class="section-wrap section-about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow">A little about me</p>
+          <h2 id="about-title">Thoughtful software, from the database up.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>I’m a Full-Stack Web Developer and BS Information Technology graduate from Visayas State University, Isabel, Leyte. I work across backend logic, relational data, and responsive frontend experiences.</p>
+          <p>My projects include e-commerce and academic management workflows, as well as an academic thesis integrating web software with local camera and Arduino hardware. I value clear requirements, maintainable code, and practical solutions people can use.</p>
+          <a class="text-link" href="#projects">See selected projects <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <section id="about">
+    <section class="section-wrap section-projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
-        <p class="section-label">About</p>
-        <div class="copy-block reveal">
-            <p>
-              I am a Full-Stack Web Developer focused on both backend and frontend work. I build with PHP 8, Laravel 12, MySQL,
-              React, Tailwind CSS, REST APIs, and responsive interfaces so the systems I create are practical, maintainable,
-              and ready for real-world use.
-            </p>
-            <p>
-              My work spans production systems, thesis projects, and academic applications. I care about clean architecture,
-              database design, debugging, and shipping interfaces that feel polished for both users and teams.
-            </p>
-            <p>
-              I work with Git, GitHub, Docker, WordPress, Composer, VS Code, XAMPP, and InfinityFree, and I keep learning so I
-              can build better software across backend, frontend, and deployment workflows.
-            </p>
+        <div class="section-intro reveal">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="projects-title">Projects with a purpose.</h2>
+          </div>
+          <p>Independent builds and academic work. Previews come from the public demos; project details distinguish what the source confirms from what could not be exercised publicly.</p>
         </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="experience">
-      <div class="container">
-        <p class="section-label">Professional Experience</p>
-
-        <div class="experience-grid">
-          <article class="experience-card experience-card--primary reveal">
-            <div class="card-topline">
-              <div>
-                <h2 class="card-title">SyncPoint Strategies</h2>
-                <p class="card-subtitle">Full-Stack Web Developer</p>
-              </div>
-              <span class="status-pill status-pill--current">Current</span>
-            </div>
-
-            <div class="card-meta">
-              <span>April 2026 - Present</span>
-              <span>On-call</span>
-            </div>
-
-              <div class="stack-line">
-                <span>Laravel 12</span>
-                <span>Tailwind CSS</span>
-                <span>MySQL</span>
-                <span>PHP 8</span>
-              <span>Git</span>
-              <span>Docker</span>
-              <span>WordPress</span>
-              <span>JavaScript</span>
-              <span>HTML5</span>
-            </div>
-
-            <ul class="bullet-list">
-              <li>Developed and maintained CRUD functionalities for multiple system modules.</li>
-              <li>Built responsive and user-friendly interfaces with Tailwind CSS.</li>
-              <li>Integrated Laravel backend logic with MySQL databases.</li>
-              <li>Processed forms and validated user input.</li>
-              <li>Managed application data.</li>
-              <li>Collaborated with the development team to implement new features.</li>
-              <li>Resolved bugs and improved application performance and maintainability.</li>
-            </ul>
-          </article>
-
-          <aside class="experience-card experience-card--secondary reveal">
-            <div class="card-topline">
-              <div>
-                <h2 class="card-title">Education</h2>
-                <p class="card-subtitle">BS in Information Technology</p>
-              </div>
-            </div>
-
-            <div class="card-meta">
-              <span>Visayas State University</span>
-              <span>Isabel, Leyte</span>
-            </div>
-
-            <ul class="bullet-list">
-              <li>Relevant coursework in Web Development, Networking, and Database Management Systems.</li>
-              <li>Applied skills through professional, academic, and thesis projects.</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="process">
-      <div class="container">
-        <p class="section-label">How I Build</p>
-        <div class="process-grid">
-          <article class="process-step reveal">
-            <span class="process-number">01</span>
-            <h3>Understand Requirements</h3>
-            <p>Clarify the problem, scope, and expected outcome before writing code.</p>
-          </article>
-          <article class="process-step reveal">
-            <span class="process-number">02</span>
-            <h3>Design Database & Architecture</h3>
-            <p>Plan data models, relationships, and the structure that supports the system.</p>
-          </article>
-          <article class="process-step reveal">
-            <span class="process-number">03</span>
-            <h3>Develop Backend & APIs</h3>
-            <p>Implement PHP and Laravel logic, integrations, validation, and business rules.</p>
-          </article>
-          <article class="process-step reveal">
-            <span class="process-number">04</span>
-            <h3>Build Responsive UI</h3>
-            <p>Create clean interfaces with Tailwind CSS, HTML, and JavaScript.</p>
-          </article>
-          <article class="process-step reveal">
-            <span class="process-number">05</span>
-            <h3>Test & Debug</h3>
-            <p>Review workflows, fix issues, and refine usability across devices.</p>
-          </article>
-          <article class="process-step reveal">
-            <span class="process-number">06</span>
-            <h3>Deploy & Maintain</h3>
-            <p>Ship the system, monitor stability, and improve maintainability over time.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="projects">
-      <div class="container">
-            <p class="section-label">Projects</p>
 
         <div class="project-grid">
           <article class="project-card reveal">
-            <div class="card-topline">
-              <div>
-                <span class="project-badge">Thesis Project</span>
-                <h2 class="card-title">Facial Recognition Enabled Access Monitoring System</h2>
-                <p class="card-subtitle">Machine learning-based access control with Arduino-triggered gate operation</p>
+            <figure class="project-media">
+              <a class="project-image-link" href="https://e-commerceproj.x10.mx/" target="_blank" rel="noopener noreferrer" aria-label="Open the live E-Commerce Management System storefront">
+                <img src="./images/ecommerce-storefront.png" alt="Captured public storefront showing product discovery, category filters, cart status, search, and featured products." width="1440" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Live storefront preview <span>·</span> captured from the public demo</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-heading">
+                <span class="project-type">Personal project</span>
+                <h3>E-Commerce Management System</h3>
+                <p>A product storefront and store-management workflow for browsing, carting, and managing orders.</p>
               </div>
-            </div>
-
-            <div class="card-meta">
-              <span>PHP 8</span>
-              <span>Python 3</span>
-              <span>OpenCV</span>
-              <span>Arduino UNO</span>
-              <span>HTML5</span>
-              <span>JavaScript</span>
-              <span>Tailwind CSS</span>
-              <span>MySQL</span>
-            </div>
-
-            <ul class="bullet-list">
-              <li>Built facial recognition-based access control for automated gate operation.</li>
-              <li>Connected camera input, OpenCV detection, and Arduino UNO trigger logic.</li>
-              <li>Created a PHP dashboard for attendance logging and database management.</li>
-              <li>Supported real-time monitoring through MySQL-backed records.</li>
-            </ul>
-
-            <div class="project-actions">
-              <button type="button" class="btn-secondary btn-secondary--small" data-open-modal="modal-thesis">View Case Study</button>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="card-topline">
-              <div>
-                <span class="project-badge project-badge--muted">Personal Project</span>
-                <h2 class="card-title">E-Commerce Management System</h2>
-                <p class="card-subtitle">Store management system for sneakers and apparel</p>
-              </div>
-            </div>
-
-            <div class="card-meta">
-              <span>PHP</span>
-              <span>Laravel</span>
-              <span>MySQL</span>
-              <span>JavaScript</span>
-              <span>Tailwind CSS</span>
-            </div>
-
-            <ul class="bullet-list">
-              <li>Built product catalog, checkout, customer ordering, and order tracking workflows.</li>
-              <li>Added administrative controls for products, users, inventory, and activity logging.</li>
-              <li>Kept the interface responsive for both customer and admin use cases.</li>
-            </ul>
-
-            <div class="project-actions">
-              <a href="https://e-commerceproj.x10.mx/index.php" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-secondary--small">Live Demo</a>
-              <a href="https://github.com/Gerd092002/E-CommerceProj" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-secondary--small">GitHub</a>
-              <button type="button" class="btn-secondary btn-secondary--small" data-open-modal="modal-commerce">View Case Study</button>
-            </div>
-
-            <div class="project-credentials project-credentials--note">
-              <div class="project-credentials__title">Credentials for Testing but you can also register your own account</div>
-              <div class="project-credentials__row">
-                <span>Staff</span>
-                <span>user: <strong>gerd@gmail.com</strong> | pass: <strong>gerd123</strong></span>
-              </div>
-              <div class="project-credentials__row">
-                <span>Customer</span>
-                <span>user: <strong>jeneva@gmail.com</strong> | pass: <strong>jeneva123</strong></span>
+              <ul class="project-highlights">
+                <li>Public page shows product discovery, categories, search, and cart access.</li>
+                <li>Repository includes cart, checkout, order-tracking, and product-management flows.</li>
+                <li>README describes separate admin, staff, and customer functionality.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Technologies">
+                <li>PHP</li><li>MySQL</li><li>JavaScript</li><li>Tailwind CSS</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-small button-primary" href="https://e-commerceproj.x10.mx/" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">&nearr;</span></a>
+                <a class="button button-small button-secondary" href="https://github.com/Gerd092002/E-CommerceProj" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">&nearr;</span></a>
+                <button class="case-study-trigger" type="button" data-open-modal="modal-commerce">Case study <span aria-hidden="true">&rarr;</span></button>
               </div>
             </div>
           </article>
 
           <article class="project-card reveal">
-            <div class="card-topline">
-              <div>
-                <span class="project-badge project-badge--muted">Personal Project</span>
-                <h2 class="card-title">Academic Performance Monitoring System</h2>
-                <p class="card-subtitle">Role-based system for admins, teachers, and students</p>
+            <figure class="project-media">
+              <a class="project-image-link" href="https://academictrack.x10.mx/login.php" target="_blank" rel="noopener noreferrer" aria-label="Open the Academic Performance Monitoring System sign-in page">
+                <img src="./images/academic-login-page.png" alt="Screenshot of the live Academic Performance Monitoring System login page, showing its sign-in form and login button." width="1440" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Live sign-in preview <span>·</span> authenticated role views are separate</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-heading">
+                <span class="project-type">Personal project</span>
+                <h3>Academic Performance Monitoring System</h3>
+                <p>A role-based application for managing academic records and student performance workflows.</p>
+              </div>
+              <ul class="project-highlights">
+                <li>Public demo confirms the system sign-in interface.</li>
+                <li>Repository has distinct admin, teacher, and student dashboards.</li>
+                <li>Source includes admin user management, teacher grade/enrollment tools, and student grade views.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Technologies">
+                <li>PHP 8</li><li>MySQL</li><li>JavaScript</li><li>Tailwind CSS</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-small button-primary" href="https://academictrack.x10.mx/login.php" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">&nearr;</span></a>
+                <a class="button button-small button-secondary" href="https://github.com/Gerd092002/academicperformance-proj" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">&nearr;</span></a>
+                <button class="case-study-trigger" type="button" data-open-modal="modal-academic">Case study <span aria-hidden="true">&rarr;</span></button>
               </div>
             </div>
+          </article>
 
-            <div class="card-meta">
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>JavaScript</span>
-              <span>Tailwind CSS</span>
-            </div>
-
-            <ul class="bullet-list">
-              <li>Built separate admin, teacher, and student portals for academic workflows.</li>
-              <li>Implemented performance tracking, enrollment handling, and user data management.</li>
-              <li>Kept the system structured for role-based access and organized academic records.</li>
-            </ul>
-
-            <div class="project-actions">
-              <a href="https://academictrack.x10.mx/login.php" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-secondary--small">Live Demo</a>
-              <a href="https://github.com/Gerd092002/academicperformance-proj" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-secondary--small">GitHub</a>
-              <button type="button" class="btn-secondary btn-secondary--small" data-open-modal="modal-academic">View Case Study</button>
-            </div>
-
-            <div class="project-credentials project-credentials--note">
-              <div class="project-credentials__title">Credentials for Testing but you can also register your own account</div>
-              <div class="project-credentials__row">
-                <span>Teacher</span>
-                <span>user: <strong>gerd@gmail.com</strong> | pass: <strong>A1b2C3d4garaygerd</strong></span>
+          <article class="project-card project-card-thesis reveal">
+            <figure class="project-media project-media-diagram">
+              <img src="./images/thesis-architecture.svg" alt="Redrawn thesis framework using the Input–Process–Output model: facial, enrollment, and administrative data feed user management, facial recognition, authentication, reporting, and monitoring modules, which produce physical access-control and digital monitoring outputs." width="1440" height="960" loading="lazy" decoding="async" />
+              <figcaption>Thesis conceptual framework, redrawn <span>·</span> local hardware project, no public demo</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-heading">
+                <span class="project-type project-type-academic">Academic thesis</span>
+                <h3>Facial Recognition Enabled Access Monitoring System</h3>
+                <p>A locally operated access-monitoring prototype connecting facial recognition, records, and physical gate hardware.</p>
               </div>
-              <div class="project-credentials__row">
-                <span>Student</span>
-                <span>user: <strong>generson@gmail.com</strong> | pass: <strong>generson123</strong></span>
+              <ul class="project-highlights">
+                <li>Designed for a local camera and physical Arduino UNO; it has no public hosted demo.</li>
+                <li>Combines Python/OpenCV recognition with a PHP and MySQL monitoring dashboard.</li>
+                <li>The framework shows the project's data inputs, processing modules, user roles, system outputs, and feedback loop.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Technologies">
+                <li>PHP 8</li><li>Python 3</li><li>OpenCV</li><li>Arduino UNO</li><li>MySQL</li><li>JavaScript</li><li>Tailwind CSS</li>
+              </ul>
+              <div class="project-actions">
+                <button class="case-study-trigger" type="button" data-open-modal="modal-thesis">Case study <span aria-hidden="true">&rarr;</span></button>
               </div>
             </div>
           </article>
@@ -374,261 +203,175 @@
       </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <section id="skills">
+    <section class="section-wrap" id="experience" aria-labelledby="experience-title">
       <div class="container">
-        <p class="section-label">Skills</p>
-
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-              <h3>Backend</h3>
-              <div class="tag-list">
-                <span>PHP 8</span>
-                <span>Laravel 12</span>
-                <span>REST APIs</span>
-                <span>Python 3</span>
-                <span>Java</span>
-      
-              </div>
-            </article>
-
-            <article class="skill-card reveal">
-              <h3>Frontend</h3>
-              <div class="tag-list">
-                <span>JavaScript</span>
-                <span>React</span>
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>Tailwind CSS</span>
-                <span>Bootstrap 3</span>
-                <span>React Native</span>
-              </div>
-            </article>
-
-            <article class="skill-card reveal">
-              <h3>Database</h3>
-            <div class="tag-list">
-              <span>MySQL</span>
-              <span>PostgreSQL</span>
-            </div>
-          </article>
-
-            <article class="skill-card reveal">
-              <h3>Tools & DevOps</h3>
-              <div class="tag-list">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Docker</span>
-                <span>Composer</span>
-                <span>VS Code</span>
-                <span>WordPress</span>
-                <span>XAMPP</span>
-                <span>InfinityFree</span>
-                <span>x10Hosting</span>
-                <span>Supabase</span>
-              </div>
-            </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <section id="contact">
-      <div class="container">
-        <p class="section-label">Contact</p>
-
-        <div class="contact-card reveal">
-          <div class="contact-copy">
-            <h2>Let's build something useful.</h2>
-            <p>
-              Open to Full-Stack, PHP, Laravel, and Software Developer opportunities.
-              If you need someone who can move between backend logic, databases, and clean UI delivery, let's connect.
-            </p>
-
-            <div class="contact-actions">
-              <a href="mailto:gerdgaray@gmail.com" class="btn-primary">Email</a>
-              <a href="https://github.com/Gerd092002" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
-              <a href="https://www.linkedin.com/in/gerdgaray/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
-              <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">Download Resume</a>
-            </div>
-
-            <div class="contact-fineprint">
-              Phone: <a href="tel:+639974127351">+63 997 412 7351</a>
-            </div>
+        <div class="section-intro section-intro-compact reveal">
+          <div>
+            <p class="eyebrow">Professional experience</p>
+            <h2 id="experience-title">Building in a team.</h2>
           </div>
+          <p>Professional work, distinct from the personal and academic projects above.</p>
+        </div>
+        <article class="experience-card reveal">
+          <div class="experience-top">
+            <div>
+              <p class="experience-company">SyncPoint Strategies</p>
+              <h3>On-call Full-Stack Web Developer</h3>
+            </div>
+            <p class="experience-dates">April 2026 <span aria-hidden="true">—</span> Present</p>
+          </div>
+          <ul class="experience-list">
+            <li>Build and maintain CRUD features and data workflows for application modules.</li>
+            <li>Connect Laravel application logic with MySQL and deliver responsive interfaces using Tailwind CSS.</li>
+            <li>Validate form input, troubleshoot issues, and collaborate with the development team on feature delivery.</li>
+          </ul>
+          <ul class="tag-list" aria-label="Work technologies">
+            <li>PHP 8</li><li>Laravel 12</li><li>MySQL</li><li>Tailwind CSS</li><li>JavaScript</li><li>Docker</li><li>WordPress</li><li>Git &amp; GitHub</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-wrap section-skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-intro section-intro-compact reveal">
+          <div>
+            <p class="eyebrow">Tools of the trade</p>
+            <h2 id="skills-title">Skills &amp; technologies.</h2>
+          </div>
+          <p>Grouped by how I use them. No proficiency ratings—just the tools and practices I work with.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <h3>Languages &amp; backend</h3>
+            <ul class="tag-list"><li>PHP 8</li><li>Python 3</li><li>JavaScript</li><li>Java</li><li>Laravel 12</li><li>RESTful APIs</li></ul>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Frontend &amp; web</h3>
+            <ul class="tag-list"><li>HTML5</li><li>CSS3</li><li>React</li><li>React Native</li><li>Tailwind CSS</li><li>Bootstrap 3</li><li>WordPress</li><li>Responsive web design</li></ul>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Data &amp; workflows</h3>
+            <ul class="tag-list"><li>MySQL</li><li>PostgreSQL</li><li>CRUD</li><li>Data management</li><li>Data cleaning &amp; organization</li></ul>
+          </article>
+          <article class="skill-group reveal">
+            <h3>Tools &amp; practice</h3>
+            <ul class="tag-list"><li>Git</li><li>GitHub</li><li>Docker</li><li>Composer</li><li>XAMPP</li><li>VS Code</li><li>Supabase</li><li>InfinityFree</li><li>x10Hosting</li><li>Troubleshooting</li></ul>
+          </article>
+        </div>
+        <p class="skills-note">Technical skills are drawn from the supplied résumé and project brief. No proficiency levels are implied.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap section-education" id="education" aria-labelledby="education-title">
+      <div class="container education-layout reveal">
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2 id="education-title">A foundation in information technology.</h2>
+        </div>
+        <div class="education-details">
+          <h3>BS in Information Technology</h3>
+          <p>Visayas State University</p>
+          <p>Isabel, Leyte, Philippines</p>
+          <span class="education-note">Graduate</span>
         </div>
       </div>
     </section>
 
-    <div class="section-divider"></div>
-
-
-    <div class="section-divider"></div>
-
-    <section id="references">
-      <div class="container">
-        <p class="section-label">References</p>
-        <div class="references-grid">
-          <article class="reference-card reveal">
-            <h3>Ariel Verzosa</h3>
-            <p>SyncPoint Strategies - Senior Head Developer</p>
-          </article>
-          <article class="reference-card reveal">
-            <h3>Oliver Reroma</h3>
-            <p>SyncPoint Strategies - Full-Stack Developer</p>
-          </article>
+    <section class="section-wrap section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-card reveal">
+        <div>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Let’s make something useful.</h2>
+          <p class="contact-copy">For Full-Stack Web Developer opportunities or a conversation about my work, email is the best way to reach me.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="mailto:gerdgaray@gmail.com">Email Gerd <span aria-hidden="true">&nearr;</span></a>
+          <a class="contact-social" href="https://www.linkedin.com/in/gerdgaray/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+          <a class="contact-social" href="https://github.com/Gerd092002" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&nearr;</span></a>
+          <a class="contact-social" href="./resume.pdf" download>Download resume <span aria-hidden="true">&darr;</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <span>&copy; 2026 Gerd Garay</span>
-      <span>Built with HTML, CSS, and Vanilla JavaScript</span>
+      <a class="footer-brand" href="#home">Gerd Garay <span aria-hidden="true">&uarr;</span></a>
+      <p>Full-Stack Web Developer <span aria-hidden="true">·</span> Leyte, Philippines</p>
+      <p>&copy; 2026 Gerd Garay</p>
     </div>
   </footer>
 
-  <dialog class="project-modal" id="modal-thesis" aria-labelledby="modal-thesis-title">
-    <div class="modal-shell">
-      <button type="button" class="modal-close" data-close-modal aria-label="Close case study">Close</button>
-      <div class="modal-header">
-        <span class="project-badge">Thesis Project</span>
-        <h2 id="modal-thesis-title">Facial Recognition Enabled Access Monitoring System</h2>
-        <p>A machine learning-based access control system integrating facial detection technology for automated gate operation.</p>
+  <dialog class="case-study-dialog" id="modal-commerce" aria-labelledby="commerce-title">
+    <div class="dialog-shell">
+      <div class="dialog-top">
+        <p class="project-type">Personal project</p>
+        <button class="dialog-close" type="button" data-close-modal aria-label="Close E-Commerce Management System case study"><span aria-hidden="true">&times;</span></button>
       </div>
-
-      <div class="modal-grid">
-        <section class="modal-panel">
-          <h3>Overview</h3>
-          <p>An access monitoring system that combines facial recognition, a PHP web dashboard, and Arduino UNO gate automation.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Problem</h3>
-          <p>The system needed automated access control, attendance tracking, and logging in a controlled local environment with physical hardware.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Solution</h3>
-          <p>Integrated facial detection with Arduino UNO so a successful recognition event could trigger the gate mechanism and record the event in the dashboard.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Features</h3>
-          <p>Automated attendance, real-time logging, access monitoring, database management, and a PHP-based web dashboard.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Technology</h3>
-          <p>PHP 8, Python 3, OpenCV, Arduino UNO, HTML5, JavaScript, Tailwind CSS, and MySQL.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>My Contribution</h3>
-          <p>Built the web dashboard, database workflow, and integration around the hardware and recognition flow.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Challenges</h3>
-          <p>The project required a physical Arduino UNO device and a local camera environment, so it could not be hosted like a normal online demo.</p>
-        </section>
-          <section class="modal-panel">
-            <h3>Result / Learning</h3>
-            <p>The project strengthened my understanding of machine learning, web development, database work, and hardware integration. It also supported real-time monitoring of 500+ student records, improved report generation time by 50%, and helped reduce false positives by 20%.</p>
-          </section>
+      <h2 id="commerce-title">E-Commerce Management System</h2>
+      <p class="dialog-lede">A customer storefront and management workflow for product discovery, cart, orders, and store operations.</p>
+      <div class="case-study-grid">
+        <section><h3>Problem</h3><p>Product browsing and store operations needed a shared, data-backed workflow for customers and staff.</p></section>
+        <section><h3>Solution</h3><p>Created a public product storefront alongside cart, checkout, order-history, and product-management routes.</p></section>
+        <section><h3>My role</h3><p>The existing project write-up describes my work across the storefront, customer workflows, and store-management tools.</p></section>
+        <section><h3>Features</h3><p>The live home page displays products, category links, search, and cart access. Repository routes cover cart updates, checkout, order history and tracking, product management, and order-status updates; the README describes separate admin, staff, and customer functions.</p></section>
+        <section><h3>Architecture</h3><p>PHP application pages and handlers connect the storefront and management workflows to a MySQL-backed product and order model.</p></section>
+        <section><h3>Stack</h3><p>The résumé lists PHP 8, MySQL, JavaScript, and Tailwind CSS for this project. The public repository uses root-level PHP routes and its README describes PHP and MySQL; it does not confirm Laravel, so Laravel is not attributed to this project.</p></section>
+        <section><h3>Challenge</h3><p>Keeping customer cart and order flows clear while providing separate product and order controls for store operations.</p></section>
+        <section><h3>Outcome &amp; verification</h3><p>The public storefront is reachable, and source review confirms cart, checkout, order-history, and product-management routes. No checkout was submitted and no authenticated admin session was tested.</p></section>
+      </div>
+      <div class="dialog-links">
+        <a class="button button-primary" href="https://e-commerceproj.x10.mx/" target="_blank" rel="noopener noreferrer">Open live demo <span aria-hidden="true">&nearr;</span></a>
+        <a class="button button-secondary" href="https://github.com/Gerd092002/E-CommerceProj" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&nearr;</span></a>
       </div>
     </div>
   </dialog>
 
-  <dialog class="project-modal" id="modal-commerce" aria-labelledby="modal-commerce-title">
-    <div class="modal-shell">
-      <button type="button" class="modal-close" data-close-modal aria-label="Close case study">Close</button>
-      <div class="modal-header">
-        <span class="project-badge project-badge--muted">Personal Project</span>
-        <h2 id="modal-commerce-title">E-Commerce Management System</h2>
-        <p>A full-featured management system for a sneakers and apparel store.</p>
+  <dialog class="case-study-dialog" id="modal-academic" aria-labelledby="academic-title">
+    <div class="dialog-shell">
+      <div class="dialog-top">
+        <p class="project-type">Personal project</p>
+        <button class="dialog-close" type="button" data-close-modal aria-label="Close Academic Performance Monitoring System case study"><span aria-hidden="true">&times;</span></button>
       </div>
-
-      <div class="modal-grid">
-        <section class="modal-panel">
-          <h3>Overview</h3>
-          <p>An e-commerce platform that handles customer shopping flows and administrative store management from a single system.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Problem</h3>
-          <p>The store needed a structured way to manage products, orders, users, and activity tracking while keeping the interface responsive.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Solution</h3>
-          <p>Built a Laravel and MySQL system with catalog browsing, checkout, and an admin dashboard for operational control.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Features</h3>
-          <p>Product catalog, category management, search, shopping cart, checkout, user management, customer orders, order history, order tracking, audit logging, and responsive UI.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Technology</h3>
-          <p>PHP, Laravel, MySQL, JavaScript, and Tailwind CSS.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>My Contribution</h3>
-          <p>Designed and developed the store workflows, administrative tools, and customer-facing interface.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Challenges</h3>
-          <p>Balancing customer workflows with admin tools while keeping the UI responsive and the system maintainable.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Result / Learning</h3>
-          <p>Reinforced my skills in database-driven application design, Laravel backend work, and modern UI delivery.</p>
-        </section>
+      <h2 id="academic-title">Academic Performance Monitoring System</h2>
+      <p class="dialog-lede">A school-focused application with separate admin, teacher, and student workflows.</p>
+      <div class="case-study-grid">
+        <section><h3>Problem</h3><p>Academic records and school tasks needed clear workflows for people with different responsibilities.</p></section>
+        <section><h3>Solution</h3><p>Organized the application around distinct role dashboards and workflows for academic management and performance records.</p></section>
+        <section><h3>My role</h3><p>The existing project write-up attributes the core workflows, role separation, and interface to my work.</p></section>
+        <section><h3>Features</h3><p>Published source includes admin user and subject management; teacher grade submission, subject, and enrollment/approval routes; and student dashboards for viewing grades and subjects.</p></section>
+        <section><h3>Architecture</h3><p>Role-specific PHP dashboard routes use shared academic data and MySQL-backed records for grades, subjects, and enrollment workflows.</p></section>
+        <section><h3>Stack</h3><p>PHP, MySQL, JavaScript, and Tailwind CSS, as described in the project materials.</p></section>
+        <section><h3>Challenge</h3><p>Keeping teacher, student, and admin tasks distinct while making academic data understandable and manageable.</p></section>
+        <section><h3>Outcome &amp; verification</h3><p>The live sign-in page is reachable. Published source confirms role-specific dashboard files and grade/enrollment routes; authenticated dashboards were not accessed and no demo credentials are published here.</p></section>
+      </div>
+      <div class="dialog-links">
+        <a class="button button-primary" href="https://academictrack.x10.mx/login.php" target="_blank" rel="noopener noreferrer">Open live demo <span aria-hidden="true">&nearr;</span></a>
+        <a class="button button-secondary" href="https://github.com/Gerd092002/academicperformance-proj" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">&nearr;</span></a>
       </div>
     </div>
   </dialog>
 
-  <dialog class="project-modal" id="modal-academic" aria-labelledby="modal-academic-title">
-    <div class="modal-shell">
-      <button type="button" class="modal-close" data-close-modal aria-label="Close case study">Close</button>
-      <div class="modal-header">
-        <span class="project-badge project-badge--muted">Personal Project</span>
-        <h2 id="modal-academic-title">Academic Performance Monitoring System</h2>
-        <p>A role-based academic system for monitoring performance across admin, teacher, and student portals.</p>
+  <dialog class="case-study-dialog" id="modal-thesis" aria-labelledby="thesis-title">
+    <div class="dialog-shell">
+      <div class="dialog-top">
+        <p class="project-type project-type-academic">Academic thesis</p>
+        <button class="dialog-close" type="button" data-close-modal aria-label="Close thesis case study"><span aria-hidden="true">&times;</span></button>
       </div>
-
-      <div class="modal-grid">
-        <section class="modal-panel">
-          <h3>Overview</h3>
-          <p>A school-focused web system that centralizes performance tracking, user roles, and academic data management.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Problem</h3>
-          <p>The workflow needed separate access paths for admins, teachers, and students while keeping data organized and accessible.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Solution</h3>
-          <p>Implemented three role-based portals with subject management, performance tracking, and approval workflows.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Features</h3>
-          <p>Academic performance monitoring, teacher and student data management, subject and enrollment handling, grade submissions, and administrative functionality.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Technology</h3>
-          <p>PHP, MySQL, JavaScript, and Tailwind CSS.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>My Contribution</h3>
-          <p>Developed the core workflows, user roles, and the interface for managing academic data.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Challenges</h3>
-          <p>Keeping the admin, teacher, and student experiences clear while maintaining a consistent system structure.</p>
-        </section>
-        <section class="modal-panel">
-          <h3>Result / Learning</h3>
-          <p>The project strengthened my understanding of role-based application design, database relationships, and workflow-driven interfaces.</p>
-        </section>
+      <h2 id="thesis-title">Facial Recognition Enabled Access Monitoring System</h2>
+      <p class="dialog-lede">An academic prototype combining local facial recognition, access records, and a physical gate-control setup.</p>
+      <div class="case-study-grid">
+        <section><h3>Problem</h3><p>Access monitoring needed to connect camera-based recognition with stored records and an automated physical response.</p></section>
+        <section><h3>Solution</h3><p>Combined a Python/OpenCV recognition process, a PHP monitoring dashboard, MySQL records, and Arduino UNO hardware in a local setup.</p></section>
+        <section><h3>My role</h3><p>The existing thesis description identifies my contribution in the web dashboard, database workflow, and integration around recognition and hardware.</p></section>
+        <section><h3>Features</h3><p>Project materials describe facial recognition-based access monitoring, event/attendance logging, and Arduino-triggered gate operation.</p></section>
+        <section><h3>Architecture</h3><p>The diagram is a redrawn version of the conceptual Input–Process–Output framework you provided. It represents facial, enrollment, and administrative inputs; the system's five processing modules; physical and digital outputs; administrator and authorized-user roles; and the feedback loop. It is not a wiring diagram or a capture from a running deployment.</p></section>
+        <section><h3>Stack</h3><p>PHP 8, Python 3, OpenCV, Arduino UNO, HTML5, JavaScript, Tailwind CSS, and MySQL.</p></section>
+        <section><h3>Challenge</h3><p>The system depends on physical Arduino hardware and local camera access. Those dependencies make it unsuitable for a conventional public web demo.</p></section>
+        <section><h3>Outcome &amp; verification</h3><p>The résumé reports 500+ student records, 50% faster report generation, 95% recognition accuracy, and 20% fewer false positives. These are résumé-reported figures, not independently reproduced or verified for this review.</p></section>
       </div>
     </div>
   </dialog>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

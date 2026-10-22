@@ -1,152 +1,138 @@
-const navbar = document.getElementById('navbar');
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+document.documentElement.classList.add('js-ready');
 
-const setBodyScrollLock = (locked) => {
-  document.body.style.overflow = locked ? 'hidden' : '';
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileMenu = () => {
+  if (!menuToggle || !mobileMenu) return;
+
+  mobileMenu.hidden = true;
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Open navigation');
 };
 
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-}, { passive: true });
-
-menuBtn.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  menuBtn.classList.toggle('open', isOpen);
-  menuBtn.setAttribute('aria-expanded', String(isOpen));
-});
-
-document.querySelectorAll('[data-close-mobile]').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuBtn.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    mobileMenu.hidden = isOpen;
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
   });
-});
 
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 720) {
-    mobileMenu.classList.remove('open');
-    menuBtn.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  }
-}, { passive: true });
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMobileMenu);
+  });
 
-const revealEls = document.querySelectorAll('.reveal');
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
 
-if ('IntersectionObserver' in window && revealEls.length) {
-  const revealIndex = new Map();
-  revealEls.forEach((el, index) => revealIndex.set(el, index));
+    closeMobileMenu();
 
-  const revealObserver = new IntersectionObserver((entries) => {
+    const openDialog = document.querySelector('.case-study-dialog[open]');
+    if (openDialog instanceof HTMLDialogElement && openDialog.open) {
+      event.preventDefault();
+      openDialog.close();
+    }
+  }, { capture: true });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) closeMobileMenu();
+  }, { passive: true });
+}
+
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      const index = revealIndex.get(entry.target) ?? 0;
-      entry.target.style.setProperty('--reveal-delay', `${Math.min(index, 12) * 70}ms`);
-
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -8% 0px',
+    threshold: 0.08,
+    rootMargin: '0px 0px -32px 0px',
   });
 
-  revealEls.forEach((el) => revealObserver.observe(el));
+  revealElements.forEach((element) => revealObserver.observe(element));
 } else {
-  revealEls.forEach((el) => el.classList.add('visible'));
+  revealElements.forEach((element) => element.classList.add('is-visible'));
 }
 
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .nav-mobile a[href^="#"]');
+const navbar = document.querySelector('.site-header');
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+let navFrame = null;
 
-const setActiveNav = () => {
-  const marker = window.scrollY + (window.innerHeight * 0.35);
-  let current = 'hero';
+const updateNavigation = () => {
+  navFrame = null;
 
+  if (navbar) navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+
+  let currentSection = '';
   sections.forEach((section) => {
-    if (section.offsetTop <= marker) {
-      current = section.id;
-    }
+    if (section.getBoundingClientRect().top <= 140) currentSection = section.id;
   });
-
-  if (window.scrollY < 80) {
-    current = 'hero';
-  }
 
   navLinks.forEach((link) => {
-    const target = link.getAttribute('href').slice(1);
-    link.classList.toggle('active', target === current);
+    const isCurrent = link.getAttribute('href') === `#${currentSection}`;
+    if (isCurrent) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 };
 
-let navScrollFrame = null;
-
-const scheduleActiveNavUpdate = () => {
-  if (navScrollFrame !== null) return;
-
-  navScrollFrame = window.requestAnimationFrame(() => {
-    navScrollFrame = null;
-    setActiveNav();
-  });
+const scheduleNavigationUpdate = () => {
+  if (navFrame === null) navFrame = window.requestAnimationFrame(updateNavigation);
 };
 
-window.addEventListener('scroll', scheduleActiveNavUpdate, { passive: true });
-window.addEventListener('resize', scheduleActiveNavUpdate, { passive: true });
-setActiveNav();
+window.addEventListener('scroll', scheduleNavigationUpdate, { passive: true });
+window.addEventListener('resize', scheduleNavigationUpdate, { passive: true });
+scheduleNavigationUpdate();
 
-const modals = document.querySelectorAll('dialog.project-modal');
-let lastModalTrigger = null;
-
-const finishModalClose = () => {
-  setBodyScrollLock(false);
-  if (lastModalTrigger && typeof lastModalTrigger.focus === 'function') {
-    lastModalTrigger.focus();
-  }
-};
-
-const closeModal = (dialog) => {
-  if (!dialog) return;
-  if (typeof dialog.close === 'function' && dialog.open) {
-    dialog.close();
-  } else {
-    dialog.removeAttribute('open');
-    finishModalClose();
-  }
-};
+const dialogs = document.querySelectorAll('.case-study-dialog');
+let lastDialogTrigger = null;
 
 document.querySelectorAll('[data-open-modal]').forEach((trigger) => {
   trigger.addEventListener('click', () => {
-    const dialogId = trigger.getAttribute('data-open-modal');
-    const dialog = document.getElementById(dialogId);
-    if (!dialog) return;
+    const dialog = document.getElementById(trigger.getAttribute('data-open-modal'));
+    if (!(dialog instanceof HTMLDialogElement)) return;
 
-    lastModalTrigger = trigger;
-
+    lastDialogTrigger = trigger;
     if (typeof dialog.showModal === 'function') {
       dialog.showModal();
     } else {
       dialog.setAttribute('open', '');
     }
-
-    setBodyScrollLock(true);
   });
 });
 
-modals.forEach((dialog) => {
+dialogs.forEach((dialog) => {
+  dialog.querySelectorAll('[data-close-modal]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (typeof dialog.close === 'function' && dialog.open) {
+        dialog.close();
+      } else {
+        dialog.removeAttribute('open');
+        if (lastDialogTrigger instanceof HTMLElement) lastDialogTrigger.focus();
+      }
+    });
+  });
+
   dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) {
-      closeModal(dialog);
+    if (event.target !== dialog) return;
+
+    if (typeof dialog.close === 'function') {
+      dialog.close();
+    } else {
+      dialog.removeAttribute('open');
+      if (lastDialogTrigger instanceof HTMLElement) lastDialogTrigger.focus();
     }
   });
 
-  dialog.querySelectorAll('[data-close-modal]').forEach((button) => {
-    button.addEventListener('click', () => closeModal(dialog));
-  });
-
   dialog.addEventListener('close', () => {
-    finishModalClose();
+    if (lastDialogTrigger instanceof HTMLElement) lastDialogTrigger.focus();
   });
 });
